@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+echo "geef gebruikersnaam: "
+read username
+if [[ $username = "" ]] ;
+then
+	username="$(whoami)"
+fi
+
+run=true;
+while [ $run = true ]
+do
+	echo "Enter password: "
+    	read -s password
+    	echo "Confirm password: "
+    	read -s password2
+    	if [ $password = $password2 ]
+	then
+        	length=${#password}
+        	if [ $length -ge 8 ]
+		then
+            		echo "Password is correct and secure."
+            		run=false;
+        	else
+            		echo "Password is not 8 characters or longer. Please try again."
+        	fi
+    	else
+        	echo "Passwords did not match, please try again."
+    	fi
+done
+rm $1
+touch $1
+hash="$(echo "$password" | md5sum )"
+echo $username >> $1
+echo $hash >> $1

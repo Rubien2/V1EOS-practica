@@ -1,0 +1,12 @@
+#!/bin/bash
+
+touch $3
+for i in $1
+do
+	$2 i
+	if [ $? -eq 0 ]; then
+	echo "OK" >> $3
+	else
+	echo "Bad" >> $3
+	fi
+done

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+mkdir -p ~/Desktop/v1eos-Rubien2-master/shell/Afbeeldingen
+cd ~/Desktop/v1eos-Rubien2-master/shell/bestanden
+for i in *.jpg *.png
+do
+	cp -v "$i" ~/Desktop/v1eos-Rubien2-master/shell/Afbeeldingen
+done

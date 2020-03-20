@@ -1,0 +1,10 @@
+#!/bin/bash
+
+read file
+ext="${file##*.}"
+case $ext in
+"py") python3 $file ;;
+"sh") bash $file ;;
+"cc") cat $file ;;
+(*) echo "Er ging iets fout";;
+esac

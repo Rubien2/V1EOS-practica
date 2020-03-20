@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#deze functie sorteert een gegeven map
+#op gegeven sorteermethode:
+#groot>klein of klein>groot
+
+case $2 in
+"klein") ls -Slr $1 | grep -v '^d' ;;
+"groot") ls -Sl $1 | grep -v '^d' ;;
+*) echo "${2} is not a correct argument. Use 'klein' or 'groot'." ;;
+esac

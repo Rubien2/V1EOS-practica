@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd;
+cd $1;
+mogrify -resize 128x128 *.jpg -format png *.jpg
+rm *.jpg
+rm *.jpg~
