@@ -1,0 +1,1 @@
+\c geeft aan dat het input verwacht van de gebruiker

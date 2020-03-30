@@ -1,0 +1,2 @@
+als $to al bestaat, geef de melding dat het al bestaat.
+daaronder wordt de content van $from naar $to gekopieerd.

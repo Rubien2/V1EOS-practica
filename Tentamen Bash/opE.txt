@@ -1,0 +1,3 @@
+to's waarde wordt veranderd naar "(waarde van to) / (bestandsnaam in from)"
+basename zorgt ervoor dat alleen de bestandsnaam overblijft als een filepath wordt
+opgegeven.
